@@ -63,6 +63,34 @@ export default {
             </div>
         </div>
     </section>
+
+    <section id="lower-footer">
+        <div class="footer-container">
+            <div class="sign-up-btn">
+                <h4>Sign-up Now!</h4>
+            </div>
+            <div class="social-icons">
+                <h3>Follow Us</h3>
+                <ul class="icons">
+                    <li>
+                        <img src="../assets/img/footer-facebook.png" alt="Facebook logo">
+                    </li>
+                    <li>
+                        <img src="../assets/img/footer-twitter.png" alt="Twitter logo">
+                    </li>
+                    <li>
+                        <img src="../assets/img/footer-youtube.png" alt="Youtube logo">
+                    </li>
+                    <li>
+                        <img src="../assets/img/footer-pinterest.png" alt="Pinterest logo">
+                    </li>
+                    <li>
+                        <img src="../assets/img/footer-periscope.png" alt="Periscope logo">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </template>
 
 <style lang="scss">
@@ -113,6 +141,40 @@ h4 {
         position: absolute;
         right: 0;
         top: -100px;
+    }
+}
+
+#lower-footer {
+    background-color: #303030;
+    padding: 1.5rem 0;
+
+    .sign-up-btn {
+        border: 2px solid #0282f9;
+        padding: 1rem;
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            color: #0282f9;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 1.5rem;
+
+            li {
+                display: inline-block;
+                padding-right: 1.5rem;
+            }
+        }
     }
 }
 </style>
