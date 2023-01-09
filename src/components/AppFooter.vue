@@ -1,8 +1,123 @@
 <script>
 export default {
+    data() {
+        return {
+            dcComicsList: [
+                {
+                    text: "Characters",
+                    url: "#"
+                },
+                {
+                    text: "Comics",
+                    url: "#"
+                },
+                {
+                    text: "Movies",
+                    url: "#"
+                },
+                {
+                    text: "Tv",
+                    url: "#"
+                },
+                {
+                    text: "Games",
+                    url: "#"
+                },
+                {
+                    text: "Videos",
+                    url: "#"
+                },
+                {
+                    text: "News",
+                    url: "#"
+                }
+            ],
 
+            shopList: [
+                {
+                    text: "Shop DC",
+                    url: "#"
+                },
+                {
+                    text: "Shop DC Collectibles",
+                    url: "#"
+                }
+            ],
+
+            dcList: [
+                {
+                    text: "Terms Of Use",
+                    url: "#"
+                },
+                {
+                    text: "Privacy policy (New)",
+                    url: "#"
+                },
+                {
+                    text: "Ad Choices",
+                    url: "#"
+                },
+                {
+                    text: "Advertising",
+                    url: "#"
+                },
+                {
+                    text: "Jobs",
+                    url: "#"
+                },
+                {
+                    text: "Subscriptions",
+                    url: "#"
+                },
+                {
+                    text: "Talent Workshops",
+                    url: "#"
+                },
+                {
+                    text: "CPSC Certificates",
+                    url: "#"
+                },
+                {
+                    text: "Ratings",
+                    url: "#"
+                },
+                {
+                    text: "Shop Help",
+                    url: "#"
+                },
+                {
+                    text: "Contact Us",
+                    url: "#"
+                }
+            ],
+
+            sitesList: [
+                {
+                    text: "DC",
+                    url: "#"
+                },
+                {
+                    text: "MAD Magazine",
+                    url: "#"
+                },
+                {
+                    text: "DC Kids",
+                    url: "#"
+                },
+                {
+                    text: "DC Universe",
+                    url: "#"
+                },
+                {
+                    text: "DC Power Visa",
+                    url: "#"
+                }
+            ]
+        }
+    }
 }
 </script>
+
 <template>
     <section id="upper-footer">
         <div class="footer-container">
@@ -12,20 +127,17 @@ export default {
                         <li>
                             <h4>dc comics</h4>
                         </li>
-                        <li>oggetto</li>
-                        <li>oggetto</li>
-                        <li>oggetto</li>
-                        <li>oggetto</li>
-                        <li>oggetto</li>
-                        <li>oggetto</li>
-                        <li>oggetto</li>
+                        <li v-for="dcComicsListItem in dcComicsList">
+                            <a :href="dcComicsListItem.url">{{ dcComicsListItem.text }}</a>
+                        </li>
                     </ul>
                     <ul>
                         <li>
                             <h4>shop</h4>
                         </li>
-                        <li>oggetto</li>
-                        <li>oggetto</li>
+                        <li v-for="shopListItem in shopList">
+                            <a :href="shopListItem.url">{{ shopListItem.text }}</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -33,28 +145,18 @@ export default {
                     <li>
                         <h4>dc</h4>
                     </li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
+                    <li v-for="dcListItem in dcList">
+                        <a :href="dcListItem.url">{{ dcListItem.text }}</a>
+                    </li>
                 </ul>
 
                 <ul>
                     <li>
                         <h4>sites</h4>
                     </li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
-                    <li>oggetto</li>
+                    <li v-for="sitesListItem in sitesList">
+                        <a :href="sitesListItem.url">{{ sitesListItem.text }}</a>
+                    </li>
                 </ul>
             </div>
 
@@ -123,7 +225,10 @@ export default {
         li {
             font-size: 0.9rem;
             line-height: 1.4rem;
-            color: gray;
+
+            a {
+                color: gray;
+            }
         }
     }
 }
