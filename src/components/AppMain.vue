@@ -22,8 +22,10 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../styles/partials/variables.scss' as *;
+
 #content {
-    background-color: black;
+    background-color: $black-bg-color;
     padding: 3rem 0;
 
     .content-container {
@@ -34,7 +36,7 @@ export default {
 }
 
 #dc-universe {
-    background-color: #0282f9;
+    background-color: $main-color;
     padding: 4rem 0;
 
     ul {
@@ -42,7 +44,7 @@ export default {
         justify-content: space-between;
         width: 70%;
         list-style-type: none;
-        color: white;
+        color: $white-color;
         margin: 0 auto;
 
         li {

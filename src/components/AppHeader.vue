@@ -50,13 +50,12 @@ nav ul {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 0.9rem;
-        color: black;
         padding: 0 0.8rem;
     }
-
 }
 
 a {
     text-decoration: none;
+    color: black;
 }
 </style>

@@ -94,6 +94,8 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../styles/partials/variables.scss' as *;
+
 #upper-footer {
     height: 400px;
     background-image: url(../assets/img/footer-bg.jpg);
@@ -131,7 +133,7 @@ h4 {
     text-transform: uppercase;
     margin-bottom: 0.8rem;
     font-size: 1rem;
-    color: white;
+    color: $white-color;
 }
 
 .logo-big {
@@ -145,11 +147,11 @@ h4 {
 }
 
 #lower-footer {
-    background-color: #303030;
+    background-color: $dark-gray-bg-color;
     padding: 1.5rem 0;
 
     .sign-up-btn {
-        border: 2px solid #0282f9;
+        border: 2px solid $main-color;
         padding: 1rem;
 
         h4 {
@@ -162,7 +164,7 @@ h4 {
         align-items: center;
 
         h3 {
-            color: #0282f9;
+            color: $main-color;
             text-transform: uppercase;
         }
 
