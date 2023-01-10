@@ -93,9 +93,16 @@ export default {
     <MainJumbotron />
 
     <section id="current-series">
+
         <div class="series-grid">
+            <div class="current">current series</div>
             <ComicsCard v-for="comic in comics" :coverImage="comic.thumb" :comicSeries="comic.series" />
+
+            <div class="btn-load-more">
+                <a href="#">load more</a>
+            </div>
         </div>
+
     </section>
 
     <section id="dc-universe">
@@ -113,15 +120,43 @@ export default {
 @use '../styles/partials/variables.scss' as *;
 
 #current-series {
+
     background-color: $dark-gray-bg-color;
-    padding: 3rem 0;
+    color: $white-color;
+    padding-top: 3rem;
 
     .series-grid {
         display: flex;
+        position: relative;
         flex-wrap: wrap;
         width: 70%;
-        color: $white-color;
         margin: 0 auto;
+
+        .btn-load-more,
+        .current {
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: $main-color;
+        }
+
+        .current {
+            position: absolute;
+            width: 200px;
+            font-size: large;
+            text-align: center;
+            padding: 15px 0;
+            left: -20px;
+            top: -75px;
+        }
+
+        .btn-load-more {
+            padding: 10px 45px;
+            margin: 20px auto;
+
+            a {
+                color: $white-color;
+            }
+        }
     }
 }
 
