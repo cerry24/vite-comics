@@ -1,10 +1,17 @@
 <script>
-export default {
+import MainJumbotron from './AppMain_components/MainJumbotron.vue';
 
+export default {
+    components: {
+        MainJumbotron
+    }
 }
 </script>
+
 <template>
-    <section id="content">
+    <MainJumbotron />
+
+    <section id="current-series">
         <div class="content-container">
             <h3>--> Content goes here</h3>
         </div>
@@ -24,13 +31,13 @@ export default {
 <style lang="scss">
 @use '../styles/partials/variables.scss' as *;
 
-#content {
+#current-series {
     background-color: $black-bg-color;
     padding: 3rem 0;
 
     .content-container {
         width: 70%;
-        color: white;
+        color: $white-color;
         margin: 0 auto;
     }
 }

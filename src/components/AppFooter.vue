@@ -199,7 +199,7 @@ export default {
 @use '../styles/partials/variables.scss' as *;
 
 #upper-footer {
-    height: 400px;
+    height: 350px;
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;
     justify-content: space-between;
@@ -215,7 +215,7 @@ export default {
 
 .footer-nav {
     display: flex;
-    margin: 3rem 0;
+    padding-top: 2rem;
 
     ul {
         list-style-type: none;
